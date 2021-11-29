@@ -55,6 +55,7 @@ h4 {
     font-size: 1em;
     color: grey;
     background-color: #e6ffff;
+    cursor: default;
 }
 .opdracht-2 button {
     padding: 1em;

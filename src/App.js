@@ -196,7 +196,7 @@ function App() {
                             Voornaam:
                             <input
                                 type="text"
-                                name="name"
+                                name="firstname"
                                 id="firstname"
                                 value={formFname}
                                 onChange={(e) => setFormFname(e.target.value)}
@@ -207,7 +207,7 @@ function App() {
                             Achternaam:
                             <input
                                 type="text"
-                                name="name"
+                                name="lastname"
                                 id="lastname"
                                 value={formLname}
                                 onChange={(e) => setFormLname(e.target.value)}
