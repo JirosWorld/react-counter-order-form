@@ -1,8 +1,23 @@
-fieldset {
-    max-width: 450px;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 15px;
+}
+
+.form-container-state fieldset {
+    max-width: 300px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     border: 2px solid black;
     border-radius: 10px;
     margin: 5px 0;
+}
+
+.opdracht-1 button[name=reset] {
+    width: 300px;
+    padding: 1em;
+    margin-top: 10px;
 }
