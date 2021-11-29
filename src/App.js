@@ -23,7 +23,9 @@ import './App.css';
 // -- Hoe gaan we ervoor zorgen dat de Reset-button alles op 0 zet?
 // [X] Schrijf een reset-functie die de state waardes van alle counters (nu nog alleen aarbeien) op 0 zet
 // [X] Een event-listener op de reset-knop die de reset-functie triggert onClick
-// [*]  alles in componenten zetten: MISLUKT
+
+ // [*]  alles in componenten zetten: MISLUKT
+
 // [X[  alle inputs een state geven: gelukt.
 // [X]  alles mooier stylen: beetje - te weinig tijd over.
 
@@ -285,7 +287,7 @@ function App() {
                         disabled={!termsConditionsValue}
                         onClick={handleSubmit}
                         //ik krijg de 'voorwaarden-akkoord'-checkboxClick hier niet in,
-                        // dus die heb ik verplaatst naar handleSubmit
+                        // dus die heb ik verplaatst naar de handleSubmit functie bovenin.
                     >
                         Verzend
                     </button>
