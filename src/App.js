@@ -191,7 +191,7 @@ function App() {
                 <div className="opdracht-2">
                     <h2>Opdracht 2: Contactformulier</h2>
                     <form >
-                        {/* De handleSubmit functie voor dit Form heb ik verplaatst naar de submit Button beneden */}
+                        {/* De handleSubmit action voor dit Form heb ik verplaatst naar de submit Button beneden */}
                         <label htmlFor="firstname">
                             Voornaam:
                             <input

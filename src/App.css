@@ -88,6 +88,15 @@ h4 {
 input[type=number], input[type=text] {
     width: 250px;
 }
+/* postcode check */
+.input-error {
+    color: darkred;
+}
+.error-message {
+    margin: 0;
+    color: indianred;
+    font-size: 0.9em;
+}
 .options {
     padding: 0.8em;
 }
