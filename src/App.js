@@ -226,7 +226,7 @@ function App() {
                             />
                         </label>
                         <br/>
-                        <label htmlFor="form-postalcheck">Postcode:</label>
+                        <label htmlFor="form-postalcheck">Postcode:
                         <input
                             type="text"
                             placeholder="Type je volledige postcode"
@@ -236,24 +236,28 @@ function App() {
                             value={messageValue}
                             onChange={(e) => setMessageValue(e.target.value)}
                         />
+                        </label>
                         {messageValue.length > 6 && <p className="error-message">Deze postcode bestaat niet!</p>}
 
                         <br/>
-                        <label htmlFor="delivery">Bezorgfrequentie:</label>
+                        <label htmlFor="delivery">Bezorgfrequentie:
                         <select name="delivery" id="delivery" onChange={handleDeliveryChange}>
                             <option value="iedere week">iedere week</option>
                             <option value="om de week">om de week</option>
                             <option value="iedere maand">iedere maand</option>
                         </select>
+                        </label>
                         <br/>
+                        <label htmlFor="overdag">
                         <input type="radio" id="day" name="delivery_time"
                                value="overdag"
                                onChange={handleTimeChange}/>
-                        <label htmlFor="overdag">overdag</label>
+                        overdag</label>
+                        <label htmlFor="in de avond">
                         <input type="radio" id="night" name="delivery_time"
                                value="\'s Avonds"
                                onChange={handleTimeChange}/>
-                        <label htmlFor="in de avond">'s Avonds</label><br/>
+                        's Avonds</label><br/>
 
                         {/* label voor textarea eromheen wrapped? */}
                         <label htmlFor="remark">
@@ -271,7 +275,7 @@ function App() {
                         </label>
 
                         <br/>
-
+                        <label htmlFor="form-terms-conditions">
                         <input
                             type="checkbox"
                             id="form-terms-conditions"
@@ -279,7 +283,7 @@ function App() {
                             checked={termsConditionsValue}
                             onChange={(e) => toggleTermsConditionsValue(!termsConditionsValue)}
                         />
-                        <label htmlFor="form-terms-conditions">Ik ga akkoord met de voorwaarden</label>
+                         Ik ga akkoord met de voorwaarden</label>
 
                     </form>
                     <button
