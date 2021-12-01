@@ -22,7 +22,7 @@ function ButtonField({name, emoji, fruitCounter, setFruitCounter}) {
                     type="button"
                     name={name}
                     onClick={() =>
-                        setFruitCounter({fruitCounter} + 1)
+                        setFruitCounter(fruitCounter + 1)
                     }>
                     +
                 </button>
