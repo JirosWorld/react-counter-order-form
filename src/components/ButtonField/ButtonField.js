@@ -1,12 +1,12 @@
 import React from 'react';
 
-// niet in App.js geplaatst want:
-// dit component werkt niet, waarom?:
-//Error: Objects are not valid as a React child (found: object with keys {}). If you meant to render a collection of children, use an array instead.
+// let fruitCounter = 0;
+// let setFruitCounter = 0;
 
-function ButtonField(name, emoji, fruitCounter, setFruitCounter) {
+function ButtonField({name, emoji, fruitCounter, setFruitCounter}) {
+
     return (
-            <fieldset className={name}>
+            <fieldset className={`${name}-field`}>
                 <h3>{emoji} {name}</h3>
                 <button
                     type="button"

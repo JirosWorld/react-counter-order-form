@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 // mijn component werkt niet:
-// import ButtonField from "./components/ButtonField/ButtonField";
+import ButtonField from "./components/ButtonField/ButtonField";
 
 
 // STAPPENPLAN OPDRACHT 1 (alles in App.js)
@@ -24,10 +24,10 @@ import './App.css';
 // [X] Schrijf een reset-functie die de state waardes van alle counters (nu nog alleen aarbeien) op 0 zet
 // [X] Een event-listener op de reset-knop die de reset-functie triggert onClick
 
- // [*]  alles in componenten zetten: MISLUKT
+ // [*]  alles in componenten zetten: half MISLUKT
 
 // [X[  alle inputs een state geven: gelukt.
-// [X]  alles mooier stylen: beetje - te weinig tijd over.
+// [X]  alles mooier stylen.
 
 function App() {
     // dit kan ook samen in 1 object maar ik weet niet hoe
@@ -35,7 +35,6 @@ function App() {
     const [bananaCounter, setBananaCounter] = React.useState(0);
     const [appleCounter, setAppleCounter] = React.useState(0);
     const [kiwiCounter, setKiwiCounter] = React.useState(0);
-    //algemene state voor component kan niet?? // const [fruitCounter, setFruitCounter] = React.useState(0)??;
 
     // states maken voor elke individuele formulier input
     const [formFname, setFormFname] = React.useState('');
@@ -95,72 +94,31 @@ function App() {
                 <div className="opdracht-1">
                     <h2>Opdracht 1</h2>
                     <form>
-                        {/* Dit component werkt niet, dus hieronder de 4 losse */}
-                        {/*<ButtonField*/}
-                        {/*    name = "Aardbeien"*/}
-                        {/*    emoji = "&#127827;"*/}
-                        {/*    fruitCounter = {berryCounter}*/}
-                        {/*    setFruitCounter = {setBerryCounter}*/}
-                        {/*    />*/}
-
-                        <fieldset className="berry-field">
-                            <h3>&#127827; Aardbeien</h3>
-                            <button
-                                type="button"
-                                name="minus-berry"
-                                disabled={berryCounter === 0}
-                                onClick={() => setBerryCounter(berryCounter - 1)}
-                                onChange={(e) => setBerryCounter(e.target.value)}
-                            >
-                                -
-                            </button>
-                            <p>{berryCounter}</p>
-                            <button
-                                type="button"
-                                name="plus-berry"
-                                onClick={() => setBerryCounter(berryCounter + 1)}
-                                onChange={(e) => setBerryCounter(e.target.value)}
-                            >
-                                +
-                            </button>
-                        </fieldset>
-                        <fieldset className="banana-field">
-                            <h3>&#127820; Bananen</h3>
-                            <button
-                                type="button"
-                                name="minus-banana"
-                                disabled={bananaCounter === 0}
-                                onClick={() => setBananaCounter(bananaCounter - 1)}
-                            >
-                                -
-                            </button>
-                            <p>{bananaCounter}</p>
-                            <button
-                                type="button"
-                                name="plus-banana"
-                                onClick={() => setBananaCounter(bananaCounter + 1)}
-                            >
-                                +
-                            </button>
-                        </fieldset>
-                        <fieldset className="apple-field">
-                            <h3>&#127823; Appels</h3>
-                            <button
-                                type="button"
-                                name="minus-apple"
-                                disabled={appleCounter === 0}
-                                onClick={() => setAppleCounter(appleCounter - 1)}
-                            >
-                                -
-                            </button>
-                            <p>{appleCounter}</p>
-                            <button
-                                type="button"
-                                name="plus-apple"
-                                onClick={() => setAppleCounter(appleCounter + 1)}
-                            >+
-                            </button>
-                        </fieldset>
+                        <ButtonField
+                            name = "Aardbeien"
+                            emoji = "&#127827;"
+                            fruitCounter = {berryCounter}
+                            setFruitCounter = {setBerryCounter}
+                            />
+                        <ButtonField
+                            name = "Bananen"
+                            emoji = "&#127820;"
+                            fruitCounter = {bananaCounter}
+                            setFruitCounter = {setBananaCounter}
+                        />
+                        <ButtonField
+                            name = "Appels"
+                            emoji = "&#127823;"
+                            fruitCounter = {appleCounter}
+                            setFruitCounter = {setAppleCounter}
+                        />
+                        <ButtonField
+                            name = "Kiwi's"
+                            emoji = "&#129373;"
+                            fruitCounter = {kiwiCounter}
+                            setFruitCounter = {setKiwiCounter}
+                        />
+                        <p>Standaard fieldset &darr;</p>
                         <fieldset className="kiwi-field">
                             <h3>&#129373; Kiwi's</h3>
                             <button
