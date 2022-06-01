@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import options from "./data/select-data.json";
 // mijn component werkt niet:
 import ButtonField from "./components/ButtonField/ButtonField";
 
@@ -68,6 +69,7 @@ function App() {
     //functie voor select/dropdown
     function handleDeliveryChange(event){
         setDeliverySchedule(event.target.value);
+        console.log("Fruit Selected!!", event.target.value);
     }
 
     //functie voor radiobuttons
@@ -199,11 +201,11 @@ function App() {
 
                         <br/>
                         <label htmlFor="delivery">Bezorgfrequentie:
-                        <select name="delivery" id="delivery" onChange={handleDeliveryChange}>
-                            <option value="iedere week">iedere week</option>
-                            <option value="om de week">om de week</option>
-                            <option value="iedere maand">iedere maand</option>
-                        </select>
+                            <select value={deliverySchedule} onChange={handleDeliveryChange}>
+                                {options.map((option, index) => (
+                                    <option value={option.value} key={index}>{option.label}</option>
+                                ))}
+                            </select>
                         </label>
                         <br/>
                         <label htmlFor="overdag">
@@ -255,7 +257,7 @@ function App() {
                     </button>
                     <div className="output">
                         <p><strong>Dit heb je ingevuld:</strong></p>
-                        <p>{formFname}, {formLname}, {formAge}, {deliverySchedule}, {deliveryTime}, {messageValue}, {formComments}, {termsConditionsValue}</p>
+                        <p>"berryCounter", {berryCounter}, "bananaCounter", {bananaCounter}, "appleCounter", {appleCounter}, "kiwiCounter", {kiwiCounter}, "Voornaam:", {formFname}, "Achternaam:", {formLname}, "Leeftijd:", {formAge}, {deliverySchedule}, {deliveryTime}, "Postcode check:", {messageValue}, "Bericht:", {formComments}, "Voorwaarden check:", {termsConditionsValue}</p>
                     </div>
                     <div className="scroll"> &darr; </div>
                 </div>
